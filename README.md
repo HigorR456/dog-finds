@@ -1,3 +1,26 @@
+<div align='center'><img src='https://github.com/HigorR456/dog-finds/assets/109878939/2dd76463-4446-4cba-8e2e-7ffd9c4cb180'/></div>
+
+<h2>About the project</h2>
+
+This is a Job Platform named Dog Finds, its style is based in programathor website. This personal project is not finished yet, but its purpose is to have signup and login page, available jobs page, sign curriculum page and options to apply to a job and track it.
+
+👉Live demo: under development...
+
+<h3>Build with:</h3>
+
+» React JS <br>
+» Next.js <br>
+» SASS
+
+
+<h2>📸Screenshot of the Project</h2>
+<br>
+
+<img src='https://github.com/HigorR456/dog-finds/assets/109878939/36861454-1f51-40d1-b453-96db74499c19'/>
+
+____________________________________________________________________
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
