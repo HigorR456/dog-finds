@@ -10,7 +10,7 @@ const Header = () => {
         <>
             <header className={menu ? 'show' : ''}>
                 <div className='logo'>
-                    Dog Finds
+                    DOG FINDS
                     <FaDog className='icon' />
                 </div>
 
