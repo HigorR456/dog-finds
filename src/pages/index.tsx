@@ -1,33 +1,46 @@
 'use client'
+import '../styles/globals.scss'
+import '../styles/page.scss'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { useState } from 'react'
-import { SyntheticExpression } from 'typescript';
+import { useRouter } from 'next/navigation'
 
 export default function Home() {
+  const router = useRouter();
+  //const [route, setRoute] = useState();
+
   const [logOrSign, setLogOrSign] = useState<boolean>(true);
-  const [login, setLogin] = useState();
-  const [sigup, setSignup] = useState<SignupValues>({
+  const [login, setLogin] = useState<LoginValues>({
     email: '',
     password: '',
   });
+  const [signup, setSignup] = useState<SignupValues>({
+    email: '',
+    password: '',
+    pswCheck: '',
+  });
 
-  const handleOnChangeSignup = (e:React.FormEvent<HTMLInputElement>) => {
-    console.log(e.target.name);
-
-    if (e.target.name === 'email') {
-      console.log('email')
-      //setSignup({})
-    } else if (e.target.name === 'psw') {
-      console.log('psw')
-    } else if (e.target.name === 'pswCheck') {
-      console.log('pswCheck')
-    }
+  
+  //login
+  const handleOnChangeLogin = (e: React.ChangeEvent<HTMLInputElement>, key: string) => {
+    setLogin({...login, [key]: e.target.value})
+  }
+  const handleSubmitLogin= (event: SubmitEvent) => {
+    event.preventDefault()
+    router.push('/edit')
   }
 
+
+  //sign up
+  const handleOnChangeSignup = (e: React.ChangeEvent<HTMLInputElement>, key: string) => {
+    setSignup({...signup, [key]: e.target.value})
+  }
   const handleSubmitSignup= (event: SubmitEvent) => {
     event.preventDefault()
-    console.log('handleSubmitSignup')
+    if (signup.password === signup.pswCheck) {
+      router.push('/edit')
+    }
   }
 
   return (
@@ -50,7 +63,7 @@ export default function Home() {
 
               {logOrSign ? 
               //login
-              (<div className='block-wrap'>
+              (<form className='block-wrap' onSubmit={() => handleSubmitLogin}>
                 <div className='login-signup-selector'>
                   <div className='login'>Login</div>
                   <div className='signup' onClick={() => setLogOrSign(false)}>Signup</div>
@@ -59,10 +72,24 @@ export default function Home() {
                 <div className='login-form'>
 
                   <label htmlFor="email"><b>Email</b></label>
-                  <input type="text" placeholder="Enter Email" name="email" required />
+                  <input 
+                    type="text" 
+                    placeholder="Enter Email" 
+                    name="email" 
+                    required 
+                    value={login.email} 
+                    onChange={(e) => handleOnChangeLogin(e, 'email')} 
+                    />
 
                   <label htmlFor="psw"><b>Password</b></label>
-                  <input type="password" placeholder="Enter Password" name="psw" required />
+                  <input 
+                    type="password" 
+                    placeholder="Enter Password" 
+                    name="psw" 
+                    required 
+                    value={login.password} 
+                    onChange={(e) => handleOnChangeLogin(e, 'password')} 
+                    />
 
                 </div>
 
@@ -77,10 +104,10 @@ export default function Home() {
                 <div className='login-button-wrap'>
                   <button>Login</button>
                 </div>
-              </div>) : 
+              </form>) : 
 
               //signup
-              (<form className='block-wrap signup' onSubmit={handleSubmitSignup}>
+              (<form className='block-wrap signup' onSubmit={() => handleSubmitSignup}>
                 <div className='login-signup-selector'>
                   <div className='login' onClick={() => setLogOrSign(true)}>Login</div>
                   <div className='signup'>Signup</div>
@@ -94,8 +121,8 @@ export default function Home() {
                     placeholder="Enter Email" 
                     name="email" 
                     required 
-                    value={sigup.email} 
-                    onChange={(e:React.FormEvent<HTMLInputElement>) => handleOnChangeSignup(e)} 
+                    value={signup.email} 
+                    onChange={(e) => handleOnChangeSignup(e, 'email')} 
                   />
 
                   <label htmlFor="psw"><b>Password</b></label>
@@ -104,8 +131,8 @@ export default function Home() {
                     placeholder="Enter Password" 
                     name="psw" 
                     required 
-                    value={sigup.password} 
-                    onChange={(e:React.FormEvent<HTMLInputElement>) => handleOnChangeSignup(e)}
+                    value={signup.password} 
+                    onChange={(e) => handleOnChangeSignup(e, 'password')}
                   />
 
                   <label htmlFor="psw"><b>Password confirmation</b></label>
@@ -114,7 +141,7 @@ export default function Home() {
                     placeholder="Enter Password Confirmation" 
                     name="pswCheck" 
                     required 
-                    onChange={(e:React.FormEvent<HTMLInputElement>) => handleOnChangeSignup(e)} 
+                    onChange={(e) => handleOnChangeSignup(e, 'pswCheck')} 
                   />
 
                 </div>

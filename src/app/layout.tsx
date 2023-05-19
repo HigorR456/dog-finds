@@ -1,6 +1,3 @@
-import '../styles/globals.scss'
-import '../styles/page.scss'
-
 export const metadata = {
   title: 'Dog Find',
   description: 'Find jobs the best way!',
