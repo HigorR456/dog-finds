@@ -161,7 +161,7 @@ header {
 
 //main structure
 main {
-    min-height: 80vh;
+    min-height: calc(100vh - 300px);
     margin-top: 75px;
     
     display: flex;
