@@ -99,34 +99,43 @@ const index = () => {
                     />
                   </label>
 
-                  <label htmlFor="linkedinlink">Linkedin url
-                    <input 
-                      type="text" 
-                      id="linkedinlink" 
-                      name="linkedinlink" 
-                      placeholder='Ex: https://www.linkedin.com/in/example'
-                      value="" 
-                    />
-                  </label>
+                  <div className='links-wrap'>
+                    <label htmlFor="linkedinlink">Linkedin url
+                      <input 
+                        type="text" 
+                        id="linkedinlink" 
+                        name="linkedinlink" 
+                        placeholder='Ex: https://www.linkedin.com/in/example'
+                        value="" 
+                      />
+                    </label>
 
-                  <label htmlFor="githublink">GitHub url
-                    <input 
-                      type="text" 
-                      id="githublink" 
-                      name="githublink" 
-                      placeholder='Ex: https://www.github.com/example'
-                      value="" 
-                    />
-                  </label>
+                    <label htmlFor="githublink">GitHub url
+                      <input 
+                        type="text" 
+                        id="githublink" 
+                        name="githublink" 
+                        placeholder='Ex: https://www.github.com/example'
+                        value="" 
+                      />
+                    </label>
+                  </div>
 
-                  <label htmlFor="resume">Attach your resume
-                    <input 
-                      type="file" 
-                      id="resume" 
-                      name="resume"
-                      value="" 
-                    />
-                  </label>
+                  <div>
+                    <label>Attach your resume</label>
+                      <div className='attach-resume-wrap'>
+                        <img src='/attach-resume.svg' alt='attach-resume'></img>
+                        <label htmlFor="resume">Choose file
+                          <input 
+                            type="file" 
+                            id="resume" 
+                            name="resume"
+                            value="" 
+                          />
+                        </label>
+                      </div>
+                  </div>
+                  
               </fieldset>
 
               <fieldset className='abilities'>
@@ -144,39 +153,42 @@ const index = () => {
                     </select>
                   </label>
 
-                  <label htmlFor="experience">Experience level</label>
-                  <input type='hidden' />
-                  
-                  <div className=' '>
-                    <label htmlFor='junior'>
-                      Junior
-                      <input 
-                        type="radio" 
-                        id="junior" 
-                        name="experience" 
-                        value="" 
-                      />
+                  <div>
+                    <label htmlFor="experience">Experience level
+                      <input type='hidden' />
                     </label>
+                    
+                    <div className='experience-options'>
+                      <label htmlFor='junior'>
+                        <input 
+                          type="radio" 
+                          id="junior" 
+                          name="experience" 
+                          value="" 
+                        />
+                        Junior
+                      </label>
 
-                    <label htmlFor='mid'>
-                      Mid-level
-                      <input 
-                        type="radio" 
-                        id="mid" 
-                        name="experience" 
-                        value="" 
-                      />
-                    </label>
+                      <label htmlFor='mid'>
+                        <input 
+                          type="radio" 
+                          id="mid" 
+                          name="experience" 
+                          value="" 
+                        />
+                        Mid-level
+                      </label>
 
-                    <label htmlFor='senior'>
-                      Senior
-                      <input 
-                        type="radio" 
-                        id="senior" 
-                        name="experience" 
-                        value=""
-                      />
-                    </label>
+                      <label htmlFor='senior'>
+                        <input 
+                          type="radio" 
+                          id="senior" 
+                          name="experience" 
+                          value=""
+                        />
+                        Senior
+                      </label>
+                    </div>
                   </div>
                   
               </fieldset>

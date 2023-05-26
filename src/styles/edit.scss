@@ -49,9 +49,22 @@
                     flex-direction: column;
 
                     input {
+                        border: 1px solid #ccc;
+                        box-shadow: 0 1px 2px 0 #ccc inset;
+                        border-radius: 3px;
                         height: 32px;
                         font-size: 16px;
                         padding-left: 10px;
+                    }
+                }
+
+                select {
+                    padding-left: 10px;
+                    font-size: 16px;
+                    height: 32px;
+                    color: #2a3f54;
+                    option {
+                        color: #2a3f54;
                     }
                 }
             }
@@ -120,7 +133,84 @@
                     }
                 }
             }
+
+            .introduction {
+                .links-wrap {
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    gap: 20px;
+
+                    @media all and (max-width: 620px) {
+                        grid-template-columns: auto;
+                    }
+                }
+
+                .attach-resume-wrap {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background: #eee;
+                    height: 250px;
+
+                    @media all and (max-width: 620px) {
+                        flex-direction: column;
+                    }
+
+                    img {
+                        margin: auto;
+                    }
+
+                    label {
+                        display: flex;
+                        flex-direction: column;
+                        text-align: center;
+
+                        background: white;
+                        width: 160px;
+                        line-height: 32px;
+                        margin: auto;
+                        border-radius: 3px;
+                        border: 1px solid #2a3f54;
+
+                        cursor: pointer;
+                    }
+
+                    input {
+                        display: none;
+                    }
+                }
+            }
+
+            .abilities {
+                .experience-options {
+                    display: grid;
+                    grid-template-columns: auto auto auto;
+                    gap: 3px;
+
+                    @media all and (max-width: 620px) {
+                        grid-template-columns: auto;
+                    }
+                    label {
+                        align-items: flex-end;
+                        font-weight: 400;
+                        line-height: 32px;
+                        font-size: 16px;
+                        margin-bottom: 3px;
+                        border-radius: 3px;
+                        flex-direction: row;
+
+                        border: 1px solid #ccc;
+                        box-shadow: 0 1px 2px 0 #ccc inset;
+
+                        input {
+                            box-shadow: none;
+                            height: 32px;
+                            font-size: 16px;
+                            padding-left: 10px;
+                        }
+                    }
+                }
+            }
         }
     }
-
 }
