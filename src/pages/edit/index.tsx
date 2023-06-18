@@ -190,6 +190,132 @@ const index = () => {
                       </label>
                     </div>
                   </div>
+
+                  <div>
+                    <label htmlFor='tech'>Select your main tech stack and how many years of experience do you have in each
+                      <div>
+                        <select
+                          id='stack'
+                          name='stack'>
+                          <option>Technology</option>
+                          <option>Angular</option>
+                          <option>Bootstrap</option>
+                          <option>C</option>
+                          <option>C#</option>
+                          <option>C++</option>
+                          <option>Express.js</option>
+                          <option>Java</option>
+                          <option>JavaScript</option>
+                          <option>MongoDB</option>
+                          <option>Next.js</option>
+                          <option>Node.js</option>
+                          <option>Python</option>
+                          <option>PHP</option>
+                          <option>React.js</option>
+                          <option>SASS</option>
+                          <option>TailwindCSS</option>
+                          <option>TypeScript</option>
+                          <option>Vue.js</option>
+                        </select>
+
+                        <select
+                          id='exp'
+                          name='exp'>
+                          <option>Experience</option>
+                          <option>0-1</option>
+                          <option>1-2</option>
+                          <option>2-3</option>
+                          <option>3-4</option>
+                          <option>4-5</option>
+                          <option>5+</option>
+                        </select>
+                      </div>
+
+                      <div>
+                        <select
+                          id='stack'
+                          name='stack'>
+                          <option disabled selected>Technology</option>
+                          <option>Angular</option>
+                          <option>Bootstrap</option>
+                          <option>C</option>
+                          <option>C#</option>
+                          <option>C++</option>
+                          <option>Express.js</option>
+                          <option>Java</option>
+                          <option>JavaScript</option>
+                          <option>MongoDB</option>
+                          <option>Next.js</option>
+                          <option>Node.js</option>
+                          <option>Python</option>
+                          <option>PHP</option>
+                          <option>React.js</option>
+                          <option>SASS</option>
+                          <option>TailwindCSS</option>
+                          <option>TypeScript</option>
+                          <option>Vue.js</option>
+                        </select>
+
+                        <select
+                          id='exp'
+                          name='exp'>
+                          <option>Experience</option>
+                          <option>0-1</option>
+                          <option>1-2</option>
+                          <option>2-3</option>
+                          <option>3-4</option>
+                          <option>4-5</option>
+                          <option>5+</option>
+                        </select>
+                      </div>
+
+                      <div>
+                        <select
+                          id='stack'
+                          name='stack'>
+                          <option>Technology</option>
+                          <option>Angular</option>
+                          <option>Bootstrap</option>
+                          <option>C</option>
+                          <option>C#</option>
+                          <option>C++</option>
+                          <option>Express.js</option>
+                          <option>Java</option>
+                          <option>JavaScript</option>
+                          <option>MongoDB</option>
+                          <option>Next.js</option>
+                          <option>Node.js</option>
+                          <option>Python</option>
+                          <option>PHP</option>
+                          <option>React.js</option>
+                          <option>SASS</option>
+                          <option>TailwindCSS</option>
+                          <option>TypeScript</option>
+                          <option>Vue.js</option>
+                        </select>
+
+                        <select
+                          id='exp'
+                          name='exp'>
+                          <option>Experience</option>
+                          <option>0-1</option>
+                          <option>1-2</option>
+                          <option>2-3</option>
+                          <option>3-4</option>
+                          <option>4-5</option>
+                          <option>5+</option>
+                        </select>
+                      </div>
+
+                      <input type="text" list="cars" />
+                      <datalist id="cars">
+                        <option>Volvo</option>
+                        <option>Saab</option>
+                        <option>Mercedes</option>
+                        <option>Audi</option>
+                      </datalist>
+                    </label>
+                  </div>
                   
               </fieldset>
 

@@ -47,6 +47,9 @@
 
                     display: flex;
                     flex-direction: column;
+                    &:focus {
+                        border: 1px solid red;
+                    }
 
                     input {
                         border: 1px solid #ccc;
@@ -55,14 +58,30 @@
                         height: 32px;
                         font-size: 16px;
                         padding-left: 10px;
+
+                        &:focus {
+                            outline: 1px solid #2e85dd;
+                            border: 1px solid white;
+                            box-shadow: 0 0 7px 0px #7abcff;
+                        }
                     }
                 }
 
                 select {
+                    border: 1px solid #ccc;
+                    box-shadow: 0 1px 2px 0 #ccc inset;
+                    border-radius: 3px;
                     padding-left: 10px;
                     font-size: 16px;
                     height: 32px;
                     color: #2a3f54;
+
+                    &:focus {
+                        outline: 1px solid #2e85dd;
+                        border: 1px solid white;
+                        box-shadow: 0 0 7px 0px #7abcff;
+                    }
+                    
                     option {
                         color: #2a3f54;
                     }
@@ -93,15 +112,19 @@
                         flex-direction: column;
                         text-align: center;
 
-                        background: white;
+                        
+                        background: #f7f7f7;
                         width: 132px;
                         line-height: 32px;
                         margin: auto;
                         margin-top: 90px;
                         border-radius: 3px;
-                        border: 1px solid #2a3f54;
+                        border: 1px solid #ccc;
+                        box-shadow: 0 1px 1px 0 #ccc;
 
                         cursor: pointer;
+
+                        &:hover {background: white;}
                     }
 
                     input {
@@ -165,14 +188,17 @@
                         flex-direction: column;
                         text-align: center;
 
-                        background: white;
+                        background: #f7f7f7;
                         width: 160px;
                         line-height: 32px;
                         margin: auto;
                         border-radius: 3px;
-                        border: 1px solid #2a3f54;
+                        border: 1px solid #ccc;
+                        box-shadow: 0 1px 1px 0 #ccc;
 
                         cursor: pointer;
+
+                        &:hover {background: white;}
                     }
 
                     input {
@@ -191,7 +217,7 @@
                         grid-template-columns: auto;
                     }
                     label {
-                        align-items: flex-end;
+                        align-items: center;
                         font-weight: 400;
                         line-height: 32px;
                         font-size: 16px;
@@ -204,7 +230,8 @@
 
                         input {
                             box-shadow: none;
-                            height: 32px;
+                            height: 16px;
+                            border-radius: 16px;
                             font-size: 16px;
                             padding-left: 10px;
                         }
